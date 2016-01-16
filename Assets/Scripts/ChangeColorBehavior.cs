@@ -6,7 +6,7 @@ public class ChangeColorBehavior : MonoBehaviour {
     string currentColor;
     string[] colorOptions = { "red", "green", "blue" };
     int colorId;
-
+    public string playerColor;
     Renderer rend;
 
 	// Use this for initialization
@@ -47,12 +47,15 @@ public class ChangeColorBehavior : MonoBehaviour {
         switch (colorId) {
             case 0:
                 color = Color.red;
+                playerColor = "red";
                 break;
             case 1:
                 color = Color.green;
+                playerColor = "green";
                 break;
             case 2:
                 color = Color.blue;
+                playerColor = "blue";
                 break;
         }
         rend.material.color = color;
